@@ -174,6 +174,12 @@ else
     setlocal foldlevel<
 endif
 
+" jQuery keywords
+
+"syntax keyword jQueryCoreMethods    noConflict sub when
+syntax keyword jQueryMethods    ajax ajaxComplete ajaxError ajaxSend ajaxSetup ajaxStart ajaxStop ajaxSuccess get getJSON getScript load param post serialize serializeArray
+
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
@@ -229,6 +235,8 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink javaScriptHtmlElemFuncs        PreProc
 
   HiLink javaScriptCssStyles            Label
+
+  HiLink jQueryMethods                  Keyword
 
   delcommand HiLink
 endif
